@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { type Component, computed, ref } from 'vue'
+import { computed, ref } from 'vue'
 import type { Tab, TabKey } from '@/types'
 import TabLink from '@/components/TabLink.vue'
 import GeneralSettings from '@/components/GeneralSettings.vue'
@@ -40,10 +40,20 @@ const currentTabComponent = computed(() => tabs.find(tab => tab.key === currentT
         </li>
       </ul>
     </nav>
-    <component :is="currentTabComponent" />
+    <Transition mode="out-in" name="fade">
+      <component :is="currentTabComponent" />
+    </Transition>
   </main>
 </template>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s ease
+}
 
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0
+}
 </style>
