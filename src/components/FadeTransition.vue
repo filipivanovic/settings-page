@@ -9,11 +9,13 @@
 </template>
 
 <style scoped>
+/*noinspection CssUnusedSymbol*/
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.2s ease
 }
 
+/*noinspection CssUnusedSymbol*/
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0
