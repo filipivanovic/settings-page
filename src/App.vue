@@ -7,6 +7,7 @@ import GeneralSettings from '@/components/GeneralSettings.vue'
 import NotificationsSettings from '@/components/NotificationsSettings.vue'
 import PrivacySettings from '@/components/PrivacySettings.vue'
 import FadeTransition from '@/components/FadeTransition.vue'
+import NotificationsList from '@/components/NotificationsList.vue'
 
 const tabs: Tab[] = [
   {
@@ -46,6 +47,7 @@ const currentTabComponent = computed(() => tabs.find(tab => tab.key === currentT
         <component :is="currentTabComponent" />
       </KeepAlive>
     </FadeTransition>
+    <NotificationsList />
   </main>
 </template>
 
