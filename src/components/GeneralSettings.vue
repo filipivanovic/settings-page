@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { useSettings } from '@/components/composables/useSettings'
+import { useSettings } from '@/composables/useSettings'
 
 const { general } = useSettings()
 
@@ -11,19 +11,19 @@ const { general } = useSettings()
     <h2 class="text-2xl mb-4">General</h2>
     <form class="space-y-4 mx-auto">
       <div>
-        <label>Username</label>
+        <label class="mb-1">Username</label>
         <input type="text" v-model="general.username">
       </div>
       <div>
-        <label>Email</label>
+        <label class="mb-1">Email</label>
         <input type="email" v-model="general.email">
       </div>
       <div>
-        <label>About Me</label>
+        <label class="mb-1">About Me</label>
         <textarea v-model="general.about"></textarea>
       </div>
       <div>
-        <label>Gender</label>
+        <label class="mb-1">Gender</label>
         <label>
           <input type="radio" value="male" v-model="general.gender" />
           <span>Male</span>
@@ -38,7 +38,7 @@ const { general } = useSettings()
         </label>
       </div>
       <div>
-        <label>Country</label>
+        <label class="mb-1">Country</label>
         <select v-model="general.country">
           <option>Serbia</option>
           <option>Spain</option>
